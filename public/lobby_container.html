@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title>Ryan's Typing Game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<button id="logout-btn" class="top-right">Logout</button>
+<div class="container">
+    <h1>Ryan's Typing Game</h1>
+    <div id="lobby-container">
+        <h2>Lobby: <span id="lobby-id"></span></h2>
+        <div class="form-group">
+            <div class="copy-link">
+                <input type="text" id="lobby-link" readonly/>
+                <button id="copy-btn">Copy Link</button>
+            </div>
+        </div>
+        <div id="lobby-players"></div>
+        <div class="lobby-chat">
+            <ul id="chat-messages" class="chat"></ul>
+            <div class="form-group">
+                <input type="text" id="chat-input" placeholder="Type a message..."/>
+                <button id="send-chat-btn">Send</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <button id="start-game-btn">Start Game</button>
+            <button id="leave-lobby-btn">Leave Lobby</button>
+        </div>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script type = "module" src="script.js"></script>
+</body>
+</html>

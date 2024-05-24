@@ -1,0 +1,214 @@
+:root {
+  --primary-color: #5d6bc4;
+  --secondary-color: #8e44ad;
+  --background-color: #f5f5f5;
+  --font-size-large: 42px;
+  --font-size-medium: 28px;
+  --font-size-regular: 18px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom right, #5d6bc4, #8e44ad);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  padding: 60px;
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  animation: fadeIn 0.5s ease;
+  position: relative;
+}
+
+h1 {
+  font-size: var(--font-size-large);
+  color: #111;
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.8s ease;
+}
+
+h2 {
+  font-size: var(--font-size-medium);
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeIn 0.6s ease;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  animation: fadeIn 0.5s ease;
+}
+
+.form-group input,
+.form-group button {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: var(--font-size-regular);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease;
+}
+
+.form-group input:focus,
+.form-group button:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(93, 107, 196, 0.5);
+}
+
+.form-group button {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-group button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.lobby {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  animation: fadeIn 0.6s ease;
+}
+
+.lobby-id {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.chat {
+  max-height: 240px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  animation: fadeIn 0.6s ease;
+}
+
+.chat li {
+  margin-bottom: 10px;
+}
+
+.leaderboard {
+  list-style-type: none;
+  padding: 0;
+  animation: fadeIn 0.6s ease;
+}
+
+.leaderboard li {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.leaderboard li:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+.success {
+  color: var(--primary-color);
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 20px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+  border-radius: 25px;
+}
+
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: var(--font-size-regular);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.top-right:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}

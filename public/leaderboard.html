@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>Ryan's Typing Game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container">
+    <div id="leaderboard-container">
+        <h2>Race Leaderboard</h2>
+        <ol class="leaderboard" id="leaderboard-list"></ol>
+        <div class="form-group">
+            <button id="back-to-lobby-btn">Back to Lobby</button>
+            <button id="start-new-game-btn">Start New Game</button>
+        </div>
+    </div>
+</div>
+<script type = "module" src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

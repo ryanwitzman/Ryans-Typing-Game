@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+
+    <title>Ryan's Typing Game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<button id="logout-btn" class="top-right">Logout</button>
+<div class="container">
+    <h1>Ryan's Typing Game</h1>
+    <div id="lobby-selection">
+        <h2>Select a Lobby</h2>
+        <div class="form-group">
+            <button id="create-public-lobby-btn">Create Public Lobby</button>
+            <button id="create-private-lobby-btn">Create Private Lobby</button>
+        </div>
+        <div class="form-group">
+            <input type="text" id="lobby-id-input" placeholder="Enter lobby ID..."/>
+            <button id="join-lobby-btn">Join Private Lobby</button>
+        </div>
+    </div>
+    <div id="public-lobbies-container">
+        <h2>Active Public Lobbies</h2>
+        <ul id="public-lobbies-list"></ul>
+        <div class="form-group">
+            <button id="refresh-lobbies-btn">Refresh</button>
+        </div>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script type = "module" src="script.js"></script>
+</body>
+</html>

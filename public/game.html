@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <title>Ryan's Typing Game</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container">
+    <div id="game-container2">
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div id="text-container">
+            <p id="game-text">Sample text to type.</p>
+        </div>
+        <div class="form-group">
+            <input type="text" id="typing-input" placeholder="Type the text here..."/>
+            <div id="typing-metrics">
+                <p id="wpm-display">WPM: 0</p>
+                <p id="accuracy-display">Accuracy: 100%</p>
+            </div>
+            <button id="submit-btn">Submit</button>
+        </div>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
